@@ -1,4 +1,4 @@
-import { graphql, useStaticQuery } from 'gatsby'
+import { graphql, Link, useStaticQuery } from 'gatsby'
 import React from 'react'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
@@ -14,8 +14,9 @@ const BlogPage = () => {
                   title
                   date(formatString: "DD-MMM-yyyy" )
                 }
-                html
-                excerpt
+                fields{
+                    slug
+                }
               }
             }
           }
@@ -34,7 +35,7 @@ const BlogPage = () => {
         {
             edges.map((edge,index)=>(
                 <div key={index}>
-                    <h2>{edge.node.frontmatter.title}</h2>
+                    <h2><Link to={`/blog/${edge.node.fields.slug}`}>{edge.node.frontmatter.title}</Link></h2>
                     <p>{edge.node.frontmatter.date}</p>
                 </div>
             ))
