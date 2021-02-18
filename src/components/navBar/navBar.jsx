@@ -1,14 +1,13 @@
 import { Link } from 'gatsby'
 import React from 'react'
-import linkStyle from './navBar.module.scss'
+import navBarStyle from './navBar.module.scss'
 const links=['home','about','blog','contact']
 const NavBar = () => {
     return (
-        <div style={{display:'flex',
-        justifyContent:'space-around'}}>
+        <div className={navBarStyle.container}>
             {
-                links.map(link=>(
-                    <Link activeClassName={linkStyle.linkActive} className={linkStyle.linkPage} to={link==='home'?'/':`/${link}`}>{link.toUpperCase()}</Link>
+                links.map((link,index)=>(
+                    <Link key={index} activeClassName={navBarStyle.linkActive} className={navBarStyle.linkPage} to={link==='home'?'/':`/${link}`}>{link.toUpperCase()}</Link>
                 ))
             }
         </div>

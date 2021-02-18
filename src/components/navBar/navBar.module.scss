@@ -1,9 +1,16 @@
-.linkPage{
-    color: rgba(168, 152, 1, 0.6);
-    text-decoration: none;
-    letter-spacing: 2px;
+.container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-width: 850px;
+  gap: 1rem;
 }
-.linkActive{
-    font-weight: 700;
-    color: #fff;
+.linkPage {
+  color: rgba(168, 152, 1, 0.6);
+  text-decoration: none;
+  letter-spacing: 2px;
+}
+.linkActive {
+  font-weight: 700;
+  color: #fff;
 }
