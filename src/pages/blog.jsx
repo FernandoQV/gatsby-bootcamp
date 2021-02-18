@@ -22,7 +22,7 @@ const BlogPage = () => {
     }
     `)
     const {edges}=data.allMarkdownRemark
-    console.log(edges);
+    
     return (
         
         <Layout>
