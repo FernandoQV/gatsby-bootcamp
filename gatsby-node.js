@@ -6,8 +6,8 @@
 
 // You can delete this file if you're not using it
 
-const { create } = require("domain")
-const path = require("path")
+
+const path = require('path')
 
 // For function createNodeField
 exports.onCreateNode = ({ node, getNode, actions }) => {
